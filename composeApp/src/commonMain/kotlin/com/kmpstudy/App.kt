@@ -20,23 +20,15 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-
-
-//@Composable
-//fun Greeting(name: String) {
-//    Text("Hello,$name")
-//}
-
-
-
-
+import com.kmpstudy.samples.basic_components.text_and_button.RichTextExample
+import com.kmpstudy.samples.basic_components.text_and_button.TextExamples
 
 
 @Composable
 fun App() {
     Column {
-        TitleText("标题")  // 职责1：显示标题
-        ConfirmButton(onClick = { /*...*/ })
+//        TextExamples()
+        RichTextExample()
     }
 }
 
@@ -52,24 +44,6 @@ fun ConfirmButton(onClick: () -> Unit) {
         Text("确认")
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 @Composable
@@ -92,11 +66,6 @@ fun CardWithAction(
         }
     }
 }
-
-
-
-
-
 
 
 @Composable
