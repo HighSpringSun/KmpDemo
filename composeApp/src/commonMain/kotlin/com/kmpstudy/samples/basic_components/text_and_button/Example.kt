@@ -7,7 +7,11 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.Send
+import androidx.compose.material.icons.filled.Send
 import androidx.compose.material3.Button
+import androidx.compose.material3.DatePicker
 import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
@@ -113,11 +117,11 @@ fun ButtonExamples() {
         Button(
             onClick = { /* 处理点击事件 */ }
         ) {
-//            Icon(
-//                imageVector = Icons.Default.Send,
-//                contentDescription = null,
-//                modifier = Modifier.size(24.dp)
-//            )
+            Icon(
+                imageVector = Icons.AutoMirrored.Filled.Send,
+                contentDescription = null,
+                modifier = Modifier.size(24.dp)
+            )
             Spacer(Modifier.width(8.dp))
             Text("发送")
         }

@@ -10,8 +10,11 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
+import androidx.compose.material3.DatePicker
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
+import androidx.compose.material3.rememberDatePickerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -20,15 +23,22 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import com.kmpstudy.samples.basic_components.image_and_icon.ImageExamples
+import com.kmpstudy.samples.basic_components.image_and_icon.ImageScaleExamples
+import com.kmpstudy.samples.basic_components.text_and_button.ButtonExamples
 import com.kmpstudy.samples.basic_components.text_and_button.RichTextExample
 import com.kmpstudy.samples.basic_components.text_and_button.TextExamples
 
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun App() {
     Column {
 //        TextExamples()
-        RichTextExample()
+//        RichTextExample()
+//        ButtonExamples()
+//        ImageExamples()
+        ImageScaleExamples()
     }
 }
 
