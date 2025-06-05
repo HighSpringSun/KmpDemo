@@ -11,12 +11,17 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.Send
 import androidx.compose.material.icons.filled.Send
 import androidx.compose.material3.Button
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DatePicker
 import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.SpanStyle
@@ -124,6 +129,27 @@ fun ButtonExamples() {
             )
             Spacer(Modifier.width(8.dp))
             Text("发送")
+        }
+    }
+}
+
+
+@Composable
+fun ButtonStateExample() {
+    var isLoading by remember { mutableStateOf(false) }
+
+    Button(
+        onClick = { isLoading = true },
+        enabled = !isLoading,
+        modifier = Modifier.width(200.dp)
+    ) {
+        if (isLoading) {
+            CircularProgressIndicator(
+                modifier = Modifier.size(24.dp),
+                color = Color.White
+            )
+        } else {
+            Text("点击加载")
         }
     }
 }

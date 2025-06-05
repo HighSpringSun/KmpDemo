@@ -23,9 +23,12 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import com.kmpstudy.samples.basic_components.image_and_icon.CommonIconsExample
+import com.kmpstudy.samples.basic_components.image_and_icon.IconExamples
 import com.kmpstudy.samples.basic_components.image_and_icon.ImageExamples
 import com.kmpstudy.samples.basic_components.image_and_icon.ImageScaleExamples
 import com.kmpstudy.samples.basic_components.text_and_button.ButtonExamples
+import com.kmpstudy.samples.basic_components.text_and_button.ButtonStateExample
 import com.kmpstudy.samples.basic_components.text_and_button.RichTextExample
 import com.kmpstudy.samples.basic_components.text_and_button.TextExamples
 
@@ -38,7 +41,10 @@ fun App() {
 //        RichTextExample()
 //        ButtonExamples()
 //        ImageExamples()
-        ImageScaleExamples()
+//        ImageScaleExamples()
+//        ButtonStateExample()
+//        IconExamples()
+        CommonIconsExample()
     }
 }
 
