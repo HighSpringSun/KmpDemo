@@ -1,9 +1,13 @@
 package com.kmpstudy
 
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -13,6 +17,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.DatePicker
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberDatePickerState
 import androidx.compose.runtime.Composable
@@ -31,6 +36,10 @@ import com.kmpstudy.samples.basic_components.text_and_button.ButtonExamples
 import com.kmpstudy.samples.basic_components.text_and_button.ButtonStateExample
 import com.kmpstudy.samples.basic_components.text_and_button.RichTextExample
 import com.kmpstudy.samples.basic_components.text_and_button.TextExamples
+import com.kmpstudy.samples.basic_components.text_and_input_controls.TextFieldExamples
+import kmpdemo.composeapp.generated.resources.Res
+import kmpdemo.composeapp.generated.resources.compose_multiplatform_logo
+import org.jetbrains.compose.resources.painterResource
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -44,7 +53,36 @@ fun App() {
 //        ImageScaleExamples()
 //        ButtonStateExample()
 //        IconExamples()
-        CommonIconsExample()
+//        CommonIconsExample()
+//        TextFieldExamples()
+        ImageBackgroundExample()
+    }
+}
+
+@Composable
+fun ImageBackgroundExample() {
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+    ) {
+        Image(
+            painterResource(Res.drawable.compose_multiplatform_logo),
+            contentDescription = "logo",
+            modifier = Modifier
+                .fillMaxSize()
+                .background(Color.Red.copy(0.5f)),
+        )
+
+        Column {
+            Text("Hello")
+
+            Button(
+                onClick = {}
+            ) {
+                Text("Button")
+            }
+        }
+
     }
 }
 
