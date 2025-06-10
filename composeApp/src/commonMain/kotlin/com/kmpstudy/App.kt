@@ -28,15 +28,33 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import com.kmpstudy.samples.basic_components.divider_and_spacer.CommonLayoutPatterns
+import com.kmpstudy.samples.basic_components.divider_and_spacer.DividerExamples
+import com.kmpstudy.samples.basic_components.divider_and_spacer.SpacerExamples
 import com.kmpstudy.samples.basic_components.image_and_icon.CommonIconsExample
 import com.kmpstudy.samples.basic_components.image_and_icon.IconExamples
 import com.kmpstudy.samples.basic_components.image_and_icon.ImageExamples
 import com.kmpstudy.samples.basic_components.image_and_icon.ImageScaleExamples
+import com.kmpstudy.samples.basic_components.slider.MediaPlayerSlider
+import com.kmpstudy.samples.basic_components.slider.RangeSliderExample
+import com.kmpstudy.samples.basic_components.slider.SliderExamples
+import com.kmpstudy.samples.basic_components.surface_and_card.CardExamples
+import com.kmpstudy.samples.basic_components.surface_and_card.CustomCardExample
+import com.kmpstudy.samples.basic_components.surface_and_card.SurfaceExamples
+import com.kmpstudy.samples.basic_components.surface_and_card.SurfaceVariants
+import com.kmpstudy.samples.basic_components.switch_and_checkbox_and_radiobutton.CheckboxExamples
+import com.kmpstudy.samples.basic_components.switch_and_checkbox_and_radiobutton.RadioButtonExamples
+import com.kmpstudy.samples.basic_components.switch_and_checkbox_and_radiobutton.SwitchExamples
 import com.kmpstudy.samples.basic_components.text_and_button.ButtonExamples
 import com.kmpstudy.samples.basic_components.text_and_button.ButtonStateExample
 import com.kmpstudy.samples.basic_components.text_and_button.RichTextExample
 import com.kmpstudy.samples.basic_components.text_and_button.TextExamples
+import com.kmpstudy.samples.basic_components.text_and_input_controls.SearchTextField
+import com.kmpstudy.samples.basic_components.text_and_input_controls.SpecialTextFieldExamples
 import com.kmpstudy.samples.basic_components.text_and_input_controls.TextFieldExamples
+import com.kmpstudy.samples.basic_components.text_and_input_controls.ValidationTextField
+import com.kmpstudy.samples.modifier_system.modifier_basics.ModifierBasicExample
+import com.kmpstudy.samples.modifier_system.modifier_basics.ModifierOrderMattersExample
 import kmpdemo.composeapp.generated.resources.Res
 import kmpdemo.composeapp.generated.resources.compose_multiplatform_logo
 import org.jetbrains.compose.resources.painterResource
@@ -55,34 +73,31 @@ fun App() {
 //        IconExamples()
 //        CommonIconsExample()
 //        TextFieldExamples()
-        ImageBackgroundExample()
-    }
-}
-
-@Composable
-fun ImageBackgroundExample() {
-    Box(
-        modifier = Modifier
-            .fillMaxSize()
-    ) {
-        Image(
-            painterResource(Res.drawable.compose_multiplatform_logo),
-            contentDescription = "logo",
-            modifier = Modifier
-                .fillMaxSize()
-                .background(Color.Red.copy(0.5f)),
-        )
-
-        Column {
-            Text("Hello")
-
-            Button(
-                onClick = {}
-            ) {
-                Text("Button")
-            }
-        }
-
+//        TextFieldExamples()
+//        SpecialTextFieldExamples()
+//        Column {
+//            ValidationTextField()
+//            ValidationTextField()
+//        }
+//        Column {
+//            SearchTextField()
+//            SearchTextField()
+//        }
+//        SwitchExamples()
+//        CheckboxExamples()
+//        RadioButtonExamples()
+//        SliderExamples()
+//        RangeSliderExample()
+//        MediaPlayerSlider()
+//        SurfaceExamples()
+//        SurfaceVariants()
+//        CardExamples()
+//        CustomCardExample()
+//        DividerExamples()
+//        SpacerExamples()
+//        CommonLayoutPatterns()
+//        ModifierBasicExample()
+        ModifierOrderMattersExample()
     }
 }
 

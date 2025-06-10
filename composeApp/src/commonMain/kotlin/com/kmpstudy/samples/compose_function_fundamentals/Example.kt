@@ -1,4 +1,4 @@
-package com.kmpstudy.samples.compose_fundamentas.compose_function_fundamentals
+package com.kmpstudy.samples.compose_function_fundamentals
 
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
