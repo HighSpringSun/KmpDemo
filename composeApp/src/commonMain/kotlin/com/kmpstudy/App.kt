@@ -53,8 +53,11 @@ import com.kmpstudy.samples.basic_components.text_and_input_controls.SearchTextF
 import com.kmpstudy.samples.basic_components.text_and_input_controls.SpecialTextFieldExamples
 import com.kmpstudy.samples.basic_components.text_and_input_controls.TextFieldExamples
 import com.kmpstudy.samples.basic_components.text_and_input_controls.ValidationTextField
+import com.kmpstudy.samples.modifier_system.modifier_basics.CardStyleExample
+import com.kmpstudy.samples.modifier_system.modifier_basics.ChainCallExample
 import com.kmpstudy.samples.modifier_system.modifier_basics.ModifierBasicExample
-import com.kmpstudy.samples.modifier_system.modifier_basics.ModifierOrderMattersExample
+import com.kmpstudy.samples.modifier_system.modifier_basics.OrderComparisonExample
+import com.kmpstudy.samples.modifier_system.modifier_basics.ScopeExample
 import kmpdemo.composeapp.generated.resources.Res
 import kmpdemo.composeapp.generated.resources.compose_multiplatform_logo
 import org.jetbrains.compose.resources.painterResource
@@ -97,7 +100,10 @@ fun App() {
 //        SpacerExamples()
 //        CommonLayoutPatterns()
 //        ModifierBasicExample()
-        ModifierOrderMattersExample()
+//        ChainCallExample()
+//        OrderComparisonExample()
+//        ScopeExample()
+        CardStyleExample()
     }
 }
 
