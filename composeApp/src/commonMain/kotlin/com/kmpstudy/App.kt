@@ -58,6 +58,13 @@ import com.kmpstudy.samples.modifier_system.modifier_basics.ChainCallExample
 import com.kmpstudy.samples.modifier_system.modifier_basics.ModifierBasicExample
 import com.kmpstudy.samples.modifier_system.modifier_basics.OrderComparisonExample
 import com.kmpstudy.samples.modifier_system.modifier_basics.ScopeExample
+import com.kmpstudy.samples.modifier_system.size_and_padding.AspectRatioExample
+import com.kmpstudy.samples.modifier_system.size_and_padding.FancyButtonExample
+import com.kmpstudy.samples.modifier_system.size_and_padding.FillSizeExample
+import com.kmpstudy.samples.modifier_system.size_and_padding.MarginExample
+import com.kmpstudy.samples.modifier_system.size_and_padding.PaddingExample
+import com.kmpstudy.samples.modifier_system.size_and_padding.SizeModifierExample
+import com.kmpstudy.samples.modifier_system.size_and_padding.WeightExample
 import kmpdemo.composeapp.generated.resources.Res
 import kmpdemo.composeapp.generated.resources.compose_multiplatform_logo
 import org.jetbrains.compose.resources.painterResource
@@ -103,7 +110,14 @@ fun App() {
 //        ChainCallExample()
 //        OrderComparisonExample()
 //        ScopeExample()
-        CardStyleExample()
+//        CardStyleExample()
+//        SizeModifierExample()
+//        FillSizeExample()
+//        PaddingExample()
+//        MarginExample()
+//        AspectRatioExample()
+//        WeightExample()
+        FancyButtonExample()
     }
 }
 
