@@ -1,6 +1,9 @@
 package com.kmpstudy
 
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.size
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -10,6 +13,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.window.Dialog
 import com.kmpstudy.samples.basic_components.divider_and_spacer.CommonLayoutPatterns
 import com.kmpstudy.samples.basic_components.divider_and_spacer.DividerExamples
 import com.kmpstudy.samples.basic_components.divider_and_spacer.SpacerExamples
@@ -35,6 +39,14 @@ import com.kmpstudy.samples.basic_components.text_and_input_controls.SearchTextF
 import com.kmpstudy.samples.basic_components.text_and_input_controls.SpecialTextFieldExamples
 import com.kmpstudy.samples.basic_components.text_and_input_controls.TextFieldExamples
 import com.kmpstudy.samples.basic_components.text_and_input_controls.ValidationTextField
+import com.kmpstudy.samples.modifier_system.appearance.AlphaExample
+import com.kmpstudy.samples.modifier_system.appearance.BackgroundExample
+import com.kmpstudy.samples.modifier_system.appearance.BorderExample
+import com.kmpstudy.samples.modifier_system.appearance.CombinedEffectsExample
+import com.kmpstudy.samples.modifier_system.appearance.ShadowExample
+import com.kmpstudy.samples.modifier_system.appearance.ShapeAndClipExample
+import com.kmpstudy.samples.modifier_system.appearance.SimpleToDoListItem
+import com.kmpstudy.samples.modifier_system.appearance.SimpleToDoListItemExample
 import com.kmpstudy.samples.modifier_system.modifier_basics.CardStyleExample
 import com.kmpstudy.samples.modifier_system.modifier_basics.ChainCallExample
 import com.kmpstudy.samples.modifier_system.modifier_basics.ModifierBasicExample
@@ -99,6 +111,23 @@ fun App() {
 //        MarginExample()
 //        AspectRatioExample()
 //        WeightExample()
-        ClickableCircleAvatar()
+//        ClickableCircleAvatar()
+//        BackgroundExample()
+//        BorderExample()
+//        ShapeAndClipExample()
+//        ShadowExample()
+//        AlphaExample()
+//        CombinedEffectsExample()
+//        CustomCardExample()
+        SimpleToDoListItemExample()
+//        Dialog(
+//            onDismissRequest = {}
+//        ) {
+//            Box(
+//                modifier = Modifier
+//                    .size(200.dp)
+//                    .background(Color.Black)
+//            )
+//        }
     }
 }
