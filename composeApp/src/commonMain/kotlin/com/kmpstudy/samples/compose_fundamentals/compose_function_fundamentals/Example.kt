@@ -1,7 +1,11 @@
-package com.kmpstudy.samples.compose_function_fundamentals
+package com.kmpstudy.samples.compose_fundamentals.compose_function_fundamentals
 
 import androidx.compose.foundation.border
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
@@ -11,22 +15,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
-
-//region App1
-@Composable
-fun Greeting(name: String) {
-    Text("Hello,$name")
-}
-
-
-@Composable
-fun App1() {
-    Greeting("Compose")
-}
-//endregion
-
-
-//region App2
 // 坏例子：做太多事情
 @Composable
 fun BadComponent() {
@@ -51,15 +39,14 @@ fun ConfirmButton(onClick: () -> Unit) {
     }
 }
 
-@Composable
-fun App2() {
-    Column {
-        com.kmpstudy.TitleText("标题")  // 职责1：显示标题
-        com.kmpstudy.ConfirmButton(onClick = { /*...*/ })
-    }
-}
-//endregion
-
+//@Composable
+//fun UserProfileCard(user: User) {
+//    Column {
+//        UserAvatar(user)          // 复用头像组件
+//        UserInfoText(user)        // 复用信息文本
+//        FollowButton(user.id)     // 复用按钮组件
+//    }
+//}
 
 @Composable
 fun HighlightText(
@@ -73,14 +60,7 @@ fun HighlightText(
 }
 
 @Composable
-fun App3() {
-    HighlightText("Hello,Compose", true)
-}
-
-
-
-@Composable
-fun App4() {
+fun CardExample() {
     // 使用示例
     CardWithAction(
         title = "Settings",
@@ -110,3 +90,12 @@ fun CardWithAction(
         }
     }
 }
+
+//@Composable
+//fun AppTheme(content: @Composable () -> Unit) {
+//    MaterialTheme(
+//        colors = lightColors(primary = Color.Blue),
+//        typography = customTypography,
+//        content = content
+//    )
+//}

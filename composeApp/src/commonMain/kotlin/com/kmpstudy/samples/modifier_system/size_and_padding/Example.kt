@@ -1,11 +1,13 @@
 package com.kmpstudy.samples.modifier_system.size_and_padding
 
+import androidx.compose.animation.animateColorAsState
 import androidx.compose.foundation.LocalIndication
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.indication
 import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -22,6 +24,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.ripple.rememberRipple
@@ -37,10 +40,14 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.LineHeightStyle
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
 @Composable
 fun SizeModifierExample() {
@@ -201,57 +208,35 @@ fun WeightExample() {
 }
 
 @Composable
-fun FancyButtonExample() {
-    var bkColor by remember { mutableStateOf(Color.LightGray) }
-    var color by remember { mutableStateOf(Color.White) }
-    Column(
+fun ClickableCircleAvatar() {
+    val interactionSource = remember { MutableInteractionSource() }
+    val isPressed by interactionSource.collectIsPressedAsState()
+
+    // 按钮背景颜色随点击状态变化
+    val backgroundColor by animateColorAsState(
+        targetValue = if (isPressed) Color.Red else Color.Red.copy(0.5f),
+        label = "Background color animation"
+    )
+
+    Box(
         modifier = Modifier
-            .fillMaxSize()
-            .padding(16.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
+            .padding(start = 8.dp, top = 8.dp)
+            .width(200.dp)
+            .height(60.dp)
+            .clip(RoundedCornerShape(0.dp, 8.dp, 0.dp, 8.dp))
+            .shadow(elevation = 3.dp)
+            .background(backgroundColor)
+            .clickable(interactionSource = interactionSource, indication = null) {
+                // 点击事件
+            },
+        contentAlignment = Alignment.Center
     ) {
-        // 使用多个 Modifier 组合创建一个精美的按钮
-        Box(
-            modifier = Modifier
-                .size(100.dp)
-                .background(
-                    color = bkColor,
-                    shape = CircleShape
-                )
-                .shadow(
-                    elevation = 10.dp,
-                    shape = CircleShape,
-                    clip = true
-                )
-                .clickable {
-                    // 点击事件
-                    bkColor = Color.Red.copy(0.5f)
-                    color = Color.Red
-                    println("Button clicked!")
-                }
-                .border(
-                    width = 2.dp,
-                    color = Color.White,
-                    shape = CircleShape
-                )
-                .padding(8.dp),
-            contentAlignment = Alignment.Center
-        ) {
-            Icon(
-                imageVector = Icons.Default.Favorite,
-                contentDescription = "Favorite",
-                tint = color,
-                modifier = Modifier.size(40.dp)
-            )
-        }
-
-        Spacer(modifier = Modifier.height(16.dp))
-
         Text(
-            text = "点击爱心",
-            style = MaterialTheme.typography.bodyLarge,
-            modifier = Modifier.padding(top = 8.dp)
+            text = "Modifier",
+            style = MaterialTheme.typography.titleMedium.copy(
+                color = Color.White,
+                fontWeight = FontWeight.Bold
+            )
         )
     }
 }
