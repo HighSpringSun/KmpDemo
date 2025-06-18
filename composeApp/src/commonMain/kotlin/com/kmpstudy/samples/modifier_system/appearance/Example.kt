@@ -11,6 +11,8 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.CutCornerShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -246,8 +248,8 @@ fun CombinedEffectsExample() {
 @Composable
 fun SimpleToDoListItemExample() {
     val list = (1..6).map { "这是第${it}个简单的待办列表子项" }
-    list.forEach { text ->
-        SimpleToDoListItem(text = text)
+    list.forEach {
+        SimpleToDoListItem(text = it)
     }
 }
 

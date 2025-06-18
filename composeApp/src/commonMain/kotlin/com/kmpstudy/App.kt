@@ -47,6 +47,10 @@ import com.kmpstudy.samples.modifier_system.appearance.ShadowExample
 import com.kmpstudy.samples.modifier_system.appearance.ShapeAndClipExample
 import com.kmpstudy.samples.modifier_system.appearance.SimpleToDoListItem
 import com.kmpstudy.samples.modifier_system.appearance.SimpleToDoListItemExample
+import com.kmpstudy.samples.modifier_system.layout_modifiers.ConstraintsExample
+import com.kmpstudy.samples.modifier_system.layout_modifiers.OffsetExample
+import com.kmpstudy.samples.modifier_system.layout_modifiers.PositionExample
+import com.kmpstudy.samples.modifier_system.layout_modifiers.WeightAndRatioExample
 import com.kmpstudy.samples.modifier_system.modifier_basics.CardStyleExample
 import com.kmpstudy.samples.modifier_system.modifier_basics.ChainCallExample
 import com.kmpstudy.samples.modifier_system.modifier_basics.ModifierBasicExample
@@ -119,15 +123,10 @@ fun App() {
 //        AlphaExample()
 //        CombinedEffectsExample()
 //        CustomCardExample()
-        SimpleToDoListItemExample()
-//        Dialog(
-//            onDismissRequest = {}
-//        ) {
-//            Box(
-//                modifier = Modifier
-//                    .size(200.dp)
-//                    .background(Color.Black)
-//            )
-//        }
+//        SimpleToDoListItemExample()
+//        PositionExample()
+//        OffsetExample()
+//        ConstraintsExample()
+        WeightAndRatioExample()
     }
 }
