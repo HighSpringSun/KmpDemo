@@ -1,11 +1,19 @@
 package com.kmpstudy
 
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.SideEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -39,6 +47,9 @@ import com.kmpstudy.samples.basic_components.text_and_input_controls.SearchTextF
 import com.kmpstudy.samples.basic_components.text_and_input_controls.SpecialTextFieldExamples
 import com.kmpstudy.samples.basic_components.text_and_input_controls.TextFieldExamples
 import com.kmpstudy.samples.basic_components.text_and_input_controls.ValidationTextField
+import com.kmpstudy.samples.layout_system.box_layout.BasicBoxExample
+import com.kmpstudy.samples.layout_system.box_layout.StackedBoxExample
+import com.kmpstudy.samples.layout_system.box_layout.VerifiedProfilePicture
 import com.kmpstudy.samples.modifier_system.appearance.AlphaExample
 import com.kmpstudy.samples.modifier_system.appearance.BackgroundExample
 import com.kmpstudy.samples.modifier_system.appearance.BorderExample
@@ -65,6 +76,7 @@ import com.kmpstudy.samples.modifier_system.size_and_padding.SizeModifierExample
 import com.kmpstudy.samples.modifier_system.size_and_padding.WeightExample
 import kmpdemo.composeapp.generated.resources.Res
 import kmpdemo.composeapp.generated.resources.compose_multiplatform_logo
+import kmpdemo.composeapp.generated.resources.tie_dog
 import org.jetbrains.compose.resources.painterResource
 
 
@@ -127,6 +139,42 @@ fun App() {
 //        PositionExample()
 //        OffsetExample()
 //        ConstraintsExample()
-        WeightAndRatioExample()
+//        WeightAndRatioExample()
+//        BasicBoxExample()
+//        StackedBoxExample()
+//        VerifiedProfilePicture()
+        LazyColExample()
+    }
+}
+
+@Composable
+fun LazyColExample() {
+    val list = remember { (1..100).map { "index:$it" } }
+    val state = rememberLazyListState()
+    var show by remember { mutableStateOf(false) }
+    CenterBox {
+        AnimatedVisibility(show) {
+            Image(
+                painter = painterResource(Res.drawable.tie_dog),
+                contentDescription = "",
+                modifier = Modifier
+                    .height(100.dp)
+            )
+        }
+        LazyColumn(
+            state = state,
+        ) {
+            items(list.size) {
+                Text(list[it])
+
+                SideEffect {
+                    if (it == 70) {
+                        show = true
+                    } else if (it > 99) {
+                        show = false
+                    }
+                }
+            }
+        }
     }
 }
