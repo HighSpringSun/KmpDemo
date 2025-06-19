@@ -48,8 +48,12 @@ import com.kmpstudy.samples.basic_components.text_and_input_controls.SpecialText
 import com.kmpstudy.samples.basic_components.text_and_input_controls.TextFieldExamples
 import com.kmpstudy.samples.basic_components.text_and_input_controls.ValidationTextField
 import com.kmpstudy.samples.layout_system.box_layout.BasicBoxExample
+import com.kmpstudy.samples.layout_system.box_layout.FloatingButtonExample
 import com.kmpstudy.samples.layout_system.box_layout.StackedBoxExample
 import com.kmpstudy.samples.layout_system.box_layout.VerifiedProfilePicture
+import com.kmpstudy.samples.layout_system.row_and_column.ColumnExamples
+import com.kmpstudy.samples.layout_system.row_and_column.ListItemExample
+import com.kmpstudy.samples.layout_system.row_and_column.RowExamples
 import com.kmpstudy.samples.modifier_system.appearance.AlphaExample
 import com.kmpstudy.samples.modifier_system.appearance.BackgroundExample
 import com.kmpstudy.samples.modifier_system.appearance.BorderExample
@@ -74,10 +78,6 @@ import com.kmpstudy.samples.modifier_system.size_and_padding.MarginExample
 import com.kmpstudy.samples.modifier_system.size_and_padding.PaddingExample
 import com.kmpstudy.samples.modifier_system.size_and_padding.SizeModifierExample
 import com.kmpstudy.samples.modifier_system.size_and_padding.WeightExample
-import kmpdemo.composeapp.generated.resources.Res
-import kmpdemo.composeapp.generated.resources.compose_multiplatform_logo
-import kmpdemo.composeapp.generated.resources.tie_dog
-import org.jetbrains.compose.resources.painterResource
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -143,38 +143,9 @@ fun App() {
 //        BasicBoxExample()
 //        StackedBoxExample()
 //        VerifiedProfilePicture()
-        LazyColExample()
-    }
-}
-
-@Composable
-fun LazyColExample() {
-    val list = remember { (1..100).map { "index:$it" } }
-    val state = rememberLazyListState()
-    var show by remember { mutableStateOf(false) }
-    CenterBox {
-        AnimatedVisibility(show) {
-            Image(
-                painter = painterResource(Res.drawable.tie_dog),
-                contentDescription = "",
-                modifier = Modifier
-                    .height(100.dp)
-            )
-        }
-        LazyColumn(
-            state = state,
-        ) {
-            items(list.size) {
-                Text(list[it])
-
-                SideEffect {
-                    if (it == 70) {
-                        show = true
-                    } else if (it > 99) {
-                        show = false
-                    }
-                }
-            }
-        }
+//        FloatingButtonExample()
+//        RowExamples()
+//        ColumnExamples()
+        ListItemExample()
     }
 }
