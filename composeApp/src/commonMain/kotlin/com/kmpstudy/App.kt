@@ -51,6 +51,12 @@ import com.kmpstudy.samples.layout_system.box_layout.BasicBoxExample
 import com.kmpstudy.samples.layout_system.box_layout.FloatingButtonExample
 import com.kmpstudy.samples.layout_system.box_layout.StackedBoxExample
 import com.kmpstudy.samples.layout_system.box_layout.VerifiedProfilePicture
+import com.kmpstudy.samples.layout_system.lazy_list.AdaptiveGrid
+import com.kmpstudy.samples.layout_system.lazy_list.CustomListItem
+import com.kmpstudy.samples.layout_system.lazy_list.FixedGrid
+import com.kmpstudy.samples.layout_system.lazy_list.HorizontalListExample
+import com.kmpstudy.samples.layout_system.lazy_list.ImageCarousel
+import com.kmpstudy.samples.layout_system.lazy_list.SimpleListExample
 import com.kmpstudy.samples.layout_system.row_and_column.ColumnExamples
 import com.kmpstudy.samples.layout_system.row_and_column.ListItemExample
 import com.kmpstudy.samples.layout_system.row_and_column.RowExamples
@@ -146,6 +152,12 @@ fun App() {
 //        FloatingButtonExample()
 //        RowExamples()
 //        ColumnExamples()
-        ListItemExample()
+//        ListItemExample()
+//        SimpleListExample()
+//        HorizontalListExample()
+//        ImageCarousel()
+//        FixedGrid()
+//        AdaptiveGrid()
+        CustomListItem()
     }
 }
