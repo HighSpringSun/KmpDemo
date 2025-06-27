@@ -68,6 +68,8 @@ import com.kmpstudy.samples.modifier_system.appearance.ShadowExample
 import com.kmpstudy.samples.modifier_system.appearance.ShapeAndClipExample
 import com.kmpstudy.samples.modifier_system.appearance.SimpleToDoListItem
 import com.kmpstudy.samples.modifier_system.appearance.SimpleToDoListItemExample
+import com.kmpstudy.samples.modifier_system.interaction.ClickableExample
+import com.kmpstudy.samples.modifier_system.interaction.GestureExample
 import com.kmpstudy.samples.modifier_system.layout_modifiers.ConstraintsExample
 import com.kmpstudy.samples.modifier_system.layout_modifiers.OffsetExample
 import com.kmpstudy.samples.modifier_system.layout_modifiers.PositionExample
@@ -158,6 +160,8 @@ fun App() {
 //        ImageCarousel()
 //        FixedGrid()
 //        AdaptiveGrid()
-        CustomListItem()
+//        CustomListItem()
+//        ClickableExample()
+        GestureExample()
     }
 }
