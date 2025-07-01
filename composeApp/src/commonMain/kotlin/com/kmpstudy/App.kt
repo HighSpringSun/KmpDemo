@@ -68,8 +68,14 @@ import com.kmpstudy.samples.modifier_system.appearance.ShadowExample
 import com.kmpstudy.samples.modifier_system.appearance.ShapeAndClipExample
 import com.kmpstudy.samples.modifier_system.appearance.SimpleToDoListItem
 import com.kmpstudy.samples.modifier_system.appearance.SimpleToDoListItemExample
+import com.kmpstudy.samples.modifier_system.custom_modifier.CustomModifierExample
+import com.kmpstudy.samples.modifier_system.custom_modifier.GradientButtonExample
 import com.kmpstudy.samples.modifier_system.interaction.ClickableExample
+import com.kmpstudy.samples.modifier_system.interaction.CombinedGesturesExample
+import com.kmpstudy.samples.modifier_system.interaction.CustomButtonExample
+import com.kmpstudy.samples.modifier_system.interaction.DraggableListItem
 import com.kmpstudy.samples.modifier_system.interaction.GestureExample
+import com.kmpstudy.samples.modifier_system.interaction.ScrollableExample
 import com.kmpstudy.samples.modifier_system.layout_modifiers.ConstraintsExample
 import com.kmpstudy.samples.modifier_system.layout_modifiers.OffsetExample
 import com.kmpstudy.samples.modifier_system.layout_modifiers.PositionExample
@@ -162,6 +168,12 @@ fun App() {
 //        AdaptiveGrid()
 //        CustomListItem()
 //        ClickableExample()
-        GestureExample()
+//        GestureExample()
+//        ScrollableExample()
+//        CombinedGesturesExample()
+//        CustomButtonExample()
+//        DraggableListItem()
+//        CustomModifierExample()
+        GradientButtonExample()
     }
 }
