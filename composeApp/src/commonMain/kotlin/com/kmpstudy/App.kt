@@ -26,6 +26,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.LineHeightStyle
 import androidx.compose.ui.unit.dp
@@ -88,6 +89,7 @@ import com.kmpstudy.samples.modifier_system.interaction.DraggableListItem
 import com.kmpstudy.samples.modifier_system.interaction.GestureExample
 import com.kmpstudy.samples.modifier_system.interaction.ScrollableExample
 import com.kmpstudy.samples.modifier_system.layout_modifiers.ConstraintsExample
+import com.kmpstudy.samples.modifier_system.layout_modifiers.LayoutOrderExample
 import com.kmpstudy.samples.modifier_system.layout_modifiers.OffsetExample
 import com.kmpstudy.samples.modifier_system.layout_modifiers.PositionExample
 import com.kmpstudy.samples.modifier_system.layout_modifiers.WeightAndRatioExample
@@ -191,7 +193,12 @@ fun App() {
 //            AnimBackground(400, Color.White)
 //            AnimHeader(1400)
 //        }
-        GroundGlass()
+//        GroundGlass()
 //        MainScreen()
+//        PositionExample()
+//        OffsetExample()
+//        ConstraintsExample()
+//        WeightAndRatioExample()
+        LayoutOrderExample()
     }
 }

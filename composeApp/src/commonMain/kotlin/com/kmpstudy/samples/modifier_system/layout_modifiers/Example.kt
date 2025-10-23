@@ -28,6 +28,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.zIndex
 
 @Composable
 fun PositionExample() {
@@ -224,6 +225,29 @@ fun WeightAndRatioExample() {
                 .fillMaxWidth()
                 .aspectRatio(16f / 9f)
                 .background(Color.Green)
+        )
+    }
+}
+
+
+@Composable
+fun LayoutOrderExample() {
+    Box(modifier = Modifier.size(200.dp)) {
+        // 使用 zIndex 控制层级
+        Box(
+            modifier = Modifier
+                .size(100.dp)
+                .align(Alignment.Center)
+                .zIndex(1f)
+                .background(Color.Blue)
+        )
+
+        Box(
+            modifier = Modifier
+                .size(150.dp)
+                .align(Alignment.Center)
+                .zIndex(0f)
+                .background(Color.Red.copy(alpha = 0.5f))
         )
     }
 }
